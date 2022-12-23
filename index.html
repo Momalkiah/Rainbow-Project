@@ -8,8 +8,34 @@
     <link rel="stylesheet" href="index.css" />
     <link rel="icon" href="favicon.ico" />
   </head>
+  <script>
+    window.onscroll = function () {
+      hideFunction();
+    };
+    document.getElementById("menu").onmouseover = function () {
+      mouseOver();
+    };
+    document.getElementById("menu").onmouseout = function () {
+      mouseOut();
+    };
+
+    function hideFunction() {
+      if (document.documentElement.scrollTop > 70) {
+        document.getElementById("menu").className = "retract";
+      } else {
+        document.getElementById("menu").className = "big";
+      }
+    }
+    function mouseOver() {
+      document.getElementById("menu").className = "big";
+    }
+
+    function mouseOut() {
+      document.getElementById("menu").className = "retract";
+    }
+  </script>
   <body>
-    <nav class="shift" style="position: absolute; z-index: 2;">
+    <nav id="menu" class="shift">
       <ul>
         <li><a href="/">Accueil</a></li>
         <li><a href="histoire.html">Histoire</a></li>
@@ -18,14 +44,9 @@
         <li><a href="Contact.html">Contact</a></li>
       </ul>
     </nav>
-    <div style="position: absolute; z-index: 1;">
-      <img src="img/color.png" alt="couleur" />
-    </div>
-    <div style="padding: 50px;"></div>
-    <table
-      class="tablo"
-      style="position: absolute; z-index: 2; padding: 100px;"
-    >
+
+    <div style="padding: 70px;"></div>
+    <table class="tabloentete" background="/img/color.png">
       <tbody>
         <tr>
           <td>
@@ -53,5 +74,37 @@
         </tr>
       </tbody>
     </table>
+
+    <div id="maindiv" style="padding: 40px; z-index: 2; position: absolute;">
+      <table class="tablo" style="background-color: teal;">
+        <tbody>
+          <tr>
+            <td>
+              <h1 style="color: black;">Explications</h1>
+              <p style="color: black;">
+                Le service de Méthode et Amélioration Continue (M&AC) a pour but
+                de veiller à l’amélioration permanente des procédés de
+                production. Les ingénieurs de M&AC travaillent essentiellement
+                avec la méthode DMAIC : Définir, Mesurer, Analyser, Innover,
+                Contrôler, qui correspond pour la majeure partie des missions et
+                projets qu’ils sont amenés à piloter. Cette amélioration
+                permanente passe par la mise en place de solutions adaptées et
+                durables pour optimiser les ateliers, rendre le quotidien des
+                opérateurs plus agréable ou encore augmenter la productivité. Il
+                faut donc être force de proposition, chercher en permanence
+                l’innovation.
+              </p>
+            </td>
+            <td>
+              <img
+                src="img/fiole.svg"
+                style="height: 300px; width: 300px; padding: 30px;"
+                alt="fiole"
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </body>
 </html>

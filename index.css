@@ -14,18 +14,39 @@ body {
   margin: 0px;
 }
 
+.retract {
+  background-color: white;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.big {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.tablo {
+  margin: 80px;
+}
+
+.tabloentete {
+  padding: 90px;
+  background-size: cover;
+}
+
 nav {
   width: 100%;
   margin: 0 auto;
+  padding: 40px 0;
   position: fixed;
-  padding: 20px 0;
   background-color: white;
+  z-index: 3;
 }
 nav ul {
   list-style: none;
   text-align: center;
   padding: 0px;
-  margin: 10px;
+  margin: 0px;
 }
 nav ul li {
   display: inline-block;
