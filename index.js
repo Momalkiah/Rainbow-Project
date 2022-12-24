@@ -1,12 +1,6 @@
-window.onscroll = function () {
-  hideFunction();
-};
-document.getElementById("menu").onmouseover = function () {
-  mouseOver();
-};
-document.getElementById("menu").onmouseout = function () {
-  mouseOut();
-};
+window.onscroll = hideFunction;
+document.getElementById("menu").onmouseover = mouseOver;
+document.getElementById("menu").onmouseout = mouseOut;
 
 function hideFunction() {
   if (document.documentElement.scrollTop > 70) {
