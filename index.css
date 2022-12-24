@@ -1,0 +1,146 @@
+html {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  letter-spacing: 3px;
+  text-align: justify;
+  line-height: 27px;
+}
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.retract {
+  background-color: white;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 99;
+}
+
+.big {
+  background-color: white;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+  position: fixed;
+  z-index: 99;
+}
+
+
+.tablo {
+  margin: 80px;
+  background-color: orange;
+}
+
+.tabloentete {
+  z-index: -2;
+  padding: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("img/color.png") no-repeat center;
+  background-size: cover;
+  margin-bottom: 3em;
+  position: relative;
+
+}
+
+.tabloentete:before {
+  content: "";
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+nav {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+  position: fixed;
+  background-color: white;
+  z-index: 99;
+  transition: all 0.4s;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0px;
+  margin: 0px;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #aaa;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+nav.shift ul li a {
+  position: relative;
+  z-index: 1;
+}
+nav.shift ul li a:hover {
+  color: #444444;
+}
+nav.shift ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: ".";
+  color: transparent;
+  background: #ffcf3d;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+nav.shift ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+p {
+  color: white;
+  font-size: 18px;
+  font-weight: 700px;
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  color: white;
+  font-size: 25px;
+  font-weight: 800;
+  padding-bottom: 30px;
+}
+
+table {
+  padding: 40px;
+  vertical-align: middle;
+}
